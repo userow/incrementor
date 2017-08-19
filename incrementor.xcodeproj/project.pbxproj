@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C100A8BCAC36B5B1C6937FFF /* libPods-incrementorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */; };
 		CD3BC39C1F480905008F29D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC39B1F480905008F29D8 /* main.m */; };
 		CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC39E1F480905008F29D8 /* AppDelegate.m */; };
 		CD3BC3A21F480905008F29D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3A11F480905008F29D8 /* ViewController.m */; };
 		CD3BC3A51F480905008F29D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A31F480905008F29D8 /* Main.storyboard */; };
 		CD3BC3A71F480905008F29D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A61F480905008F29D8 /* Assets.xcassets */; };
 		CD3BC3AA1F480905008F29D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A81F480905008F29D8 /* LaunchScreen.storyboard */; };
-		CD3BC3B51F480905008F29D8 /* incrementorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3B41F480905008F29D8 /* incrementorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BA0ED9C8E0C5A05ED45BBF3 /* Pods-incrementorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-incrementorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA06E7E96D90E5BA6E468816 /* Pods-incrementorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-incrementorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD3BC3971F480905008F29D8 /* incrementor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = incrementor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BC39B1F480905008F29D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD3BC39D1F480905008F29D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,8 +40,8 @@
 		CD3BC3A91F480905008F29D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3BC3AB1F480905008F29D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3BC3B01F480905008F29D8 /* incrementorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = incrementorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3BC3B41F480905008F29D8 /* incrementorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = incrementorTests.m; sourceTree = "<group>"; };
 		CD3BC3B61F480905008F29D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-incrementorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +56,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C100A8BCAC36B5B1C6937FFF /* libPods-incrementorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88B51E67012D6C7BC0C06471 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD3BC38E1F480904008F29D8 = {
 			isa = PBXGroup;
 			children = (
 				CD3BC3991F480905008F29D8 /* incrementor */,
 				CD3BC3B31F480905008F29D8 /* incrementorTests */,
 				CD3BC3981F480905008F29D8 /* Products */,
+				CDE257BBA25EF369DC214C28 /* Pods */,
+				88B51E67012D6C7BC0C06471 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +118,18 @@
 		CD3BC3B31F480905008F29D8 /* incrementorTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD3BC3B41F480905008F29D8 /* incrementorTests.m */,
 				CD3BC3B61F480905008F29D8 /* Info.plist */,
 			);
 			path = incrementorTests;
+			sourceTree = "<group>";
+		};
+		CDE257BBA25EF369DC214C28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA06E7E96D90E5BA6E468816 /* Pods-incrementorTests.debug.xcconfig */,
+				5BA0ED9C8E0C5A05ED45BBF3 /* Pods-incrementorTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3BC3BC1F480905008F29D8 /* Build configuration list for PBXNativeTarget "incrementorTests" */;
 			buildPhases = (
+				FBA7C47270D48C4EDBFE3B3E /* [CP] Check Pods Manifest.lock */,
 				CD3BC3AC1F480905008F29D8 /* Sources */,
 				CD3BC3AD1F480905008F29D8 /* Frameworks */,
 				CD3BC3AE1F480905008F29D8 /* Resources */,
+				B859D04B3C5ADCA773804B11 /* [CP] Embed Pods Frameworks */,
+				E9DA642B6F9EB34647CA1416 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +234,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B859D04B3C5ADCA773804B11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DA642B6F9EB34647CA1416 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA7C47270D48C4EDBFE3B3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD3BC3931F480905008F29D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -225,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3BC3B51F480905008F29D8 /* incrementorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +448,7 @@
 		};
 		CD3BC3BD1F480905008F29D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA06E7E96D90E5BA6E468816 /* Pods-incrementorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = SN623CU8P7;
@@ -390,6 +462,7 @@
 		};
 		CD3BC3BE1F480905008F29D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA0ED9C8E0C5A05ED45BBF3 /* Pods-incrementorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = SN623CU8P7;
@@ -420,6 +493,7 @@
 				CD3BC3BB1F480905008F29D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD3BC3BC1F480905008F29D8 /* Build configuration list for PBXNativeTarget "incrementorTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +502,7 @@
 				CD3BC3BE1F480905008F29D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
