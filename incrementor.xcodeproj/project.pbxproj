@@ -14,6 +14,9 @@
 		CD3BC3A51F480905008F29D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A31F480905008F29D8 /* Main.storyboard */; };
 		CD3BC3A71F480905008F29D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A61F480905008F29D8 /* Assets.xcassets */; };
 		CD3BC3AA1F480905008F29D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A81F480905008F29D8 /* LaunchScreen.storyboard */; };
+		CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */; };
+		CD3BC3CD1F4868E0008F29D8 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
+		CD3BC3CE1F4868E0008F29D8 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 		CD3BC3AB1F480905008F29D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3BC3B01F480905008F29D8 /* incrementorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = incrementorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BC3B61F480905008F29D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterSpecs.m; sourceTree = "<group>"; };
+		CD3BC3CB1F4868E0008F29D8 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
+		CD3BC3CC1F4868E0008F29D8 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-incrementorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 		CD3BC3991F480905008F29D8 /* incrementor */ = {
 			isa = PBXGroup;
 			children = (
+				CD3BC3CA1F4868E0008F29D8 /* Model */,
 				CD3BC39D1F480905008F29D8 /* AppDelegate.h */,
 				CD3BC39E1F480905008F29D8 /* AppDelegate.m */,
 				CD3BC3A01F480905008F29D8 /* ViewController.h */,
@@ -118,9 +125,19 @@
 		CD3BC3B31F480905008F29D8 /* incrementorTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */,
 				CD3BC3B61F480905008F29D8 /* Info.plist */,
 			);
 			path = incrementorTests;
+			sourceTree = "<group>";
+		};
+		CD3BC3CA1F4868E0008F29D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BC3CB1F4868E0008F29D8 /* Counter.h */,
+				CD3BC3CC1F4868E0008F29D8 /* Counter.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CDE257BBA25EF369DC214C28 /* Pods */ = {
@@ -287,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3BC3CD1F4868E0008F29D8 /* Counter.m in Sources */,
 				CD3BC3A21F480905008F29D8 /* ViewController.m in Sources */,
 				CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */,
 				CD3BC39C1F480905008F29D8 /* main.m in Sources */,
@@ -297,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3BC3CE1F4868E0008F29D8 /* Counter.m in Sources */,
+				CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
