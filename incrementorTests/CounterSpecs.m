@@ -129,6 +129,20 @@ describe(@"Counter", ^{
         
         expect(cnt).to.equal(unarchived);
     });
+    
+    
+    it (@"can save to and load from user defaults", ^{
+        Counter *cnt = [Counter new];
+        cnt.incrementValue = 1;
+        cnt.limitValue = 3;
+        cnt.currentValue = 2;
+        
+        [cnt saveCounter];
+        
+        Counter *cnt2 = [Counter loadCounter];
+        
+        expect(cnt).to.equal(cnt2);
+    });
 });
 
 SpecEnd

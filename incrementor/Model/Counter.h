@@ -10,6 +10,7 @@
 
 @interface Counter : NSObject <NSCoding>
 
+#pragma mark - initializers and constructors
 /**
  текущее значение счётчика
  */
@@ -65,6 +66,7 @@
                                limit:(NSInteger)limit
                              current:(NSInteger)current;
 
+#pragma mark - operations
 
 /**
  сброс значения счётчика
@@ -79,8 +81,18 @@
  */
 - (NSInteger)count;
 
-//TODO: NSCoding
 
 //TODO: Hash
+
+#pragma mark - saving to / loading frоm NSUserDefaults
+/**
+ сохраняет Counter в userDefaults
+ */
+- (void)saveCounter;
+
+/**
+ загружает Counter из userDefaults
+ */
++ (instancetype)loadCounter;
 
 @end

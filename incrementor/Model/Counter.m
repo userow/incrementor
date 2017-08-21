@@ -8,9 +8,11 @@
 
 #import "Counter.h"
 
+static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
+
 @interface Counter ()
 
-//@property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
+@property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
 
 @end
 
@@ -20,7 +22,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-//        _userDefaults = [NSUserDefaults standardUser  Defaults];
+        _userDefaults = [NSUserDefaults standardUserDefaults];
         
         _incrementValue = 1;
         _currentValue = 0;
@@ -124,7 +126,7 @@
     
     if (self = [super init])
     {
-//        _userDefaults = [NSUserDefaults standardUserDefaults];
+        _userDefaults = [NSUserDefaults standardUserDefaults];
         
         _currentValue   = [aDecoder decodeIntegerForKey:@"_currentValue"];
         _incrementValue = [aDecoder decodeIntegerForKey:@"_incrementValue"];
@@ -134,25 +136,33 @@
     return self;
 }
 
-/*
- #pragma mark - saving to / loading frоm NSUserDefaults
- - (void)save;
- {
- NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:self];
- [[NSUserDefaults standardUserDefaults] setObject:encodedObject forKey:CURRENT_USER_KEY];
- [[NSUserDefaults standardUserDefaults] synchronize];
- }
- 
- + (BUUser *)loadUser;
- {
- DDLogInfo(@"Loading User...");
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
- NSData *encodedObject = [defaults objectForKey:CURRENT_USER_KEY];
- BUUser *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
- 
- return object;
- }
- */
 
+#pragma mark - saving to / loading frоm NSUserDefaults
+/**
+ сохраняет Counter в userDefaults
+ */
+- (void)saveCounter;
+{
+    NSLog(@"Saving Counter...");
+    
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:self];
+    [_userDefaults setObject:encodedObject forKey:CURRENT_COUNTER];
+    [_userDefaults synchronize];
+}
+
+/**
+ загружает Counter из userDefaults
+ */
++ (instancetype)loadCounter;
+{
+    NSLog(@"Loading Counter...");
+
+    //???: как перенести во внешние зависимости? или не надо...
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:CURRENT_COUNTER];
+    Counter *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+
+    return object;
+}
 
 @end
