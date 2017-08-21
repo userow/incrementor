@@ -125,9 +125,9 @@ describe(@"Counter", ^{
         
         Counter *unarchived = (Counter *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
         
-        BOOL equal = [cnt isEqual:unarchived];
+//        BOOL equal = [cnt isEqual:unarchived];
         
-        expect(equal).to.equal(YES);
+        expect(cnt).to.equal(unarchived);
     });
 });
 
