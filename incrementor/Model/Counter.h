@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Counter : NSObject
+@interface Counter : NSObject <NSCoding>
 
 /**
  текущее значение счётчика

@@ -15,8 +15,7 @@
 		CD3BC3A71F480905008F29D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A61F480905008F29D8 /* Assets.xcassets */; };
 		CD3BC3AA1F480905008F29D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A81F480905008F29D8 /* LaunchScreen.storyboard */; };
 		CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */; };
-		CD3BC3CD1F4868E0008F29D8 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
-		CD3BC3CE1F4868E0008F29D8 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
+		CD5DB5581F4B402B00486035 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,7 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3BC3CD1F4868E0008F29D8 /* Counter.m in Sources */,
+				CD5DB5581F4B402B00486035 /* Counter.m in Sources */,
 				CD3BC3A21F480905008F29D8 /* ViewController.m in Sources */,
 				CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */,
 				CD3BC39C1F480905008F29D8 /* main.m in Sources */,
@@ -315,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3BC3CE1F4868E0008F29D8 /* Counter.m in Sources */,
 				CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

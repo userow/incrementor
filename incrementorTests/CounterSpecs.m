@@ -19,7 +19,7 @@ SpecBegin(CounterSpecs)
  */
 
 describe(@"Counter", ^{
-    it(@"can be inited with default values", ^{
+    it(@"can be initialized with default values", ^{
         Counter *counter = [[Counter alloc] init];
         
         expect(counter.currentValue).to.equal(0);
@@ -63,7 +63,7 @@ describe(@"Counter", ^{
         expect(cnt.currentValue).to.equal(0);
     });
     
-    it (@"can be nulified on reaching limit", ^{
+    it (@"Counter curreentValue should be 0 on reaching limit", ^{
         Counter *cnt = [Counter counterWithIncrement:1
                                                limit:3
                                              current:2];
@@ -73,6 +73,61 @@ describe(@"Counter", ^{
         [cnt count];
         
         expect(cnt.currentValue).to.equal(0);
+    });
+    
+    it (@"can be equal", ^{
+        Counter *cnt1 = [Counter counterWithIncrement:1
+                                                limit:3
+                                              current:2];
+        
+        Counter *cnt2 = [Counter counterWithIncrement:1
+                                                limit:3
+                                              current:1];
+        expect(cnt1).notTo.equal(cnt2);
+        
+        [cnt2 count];
+        
+        expect(cnt1).to.equal(cnt2);
+    });
+
+    it (@"can be equal - 2", ^{
+        Counter *cnt1 = [Counter counterWithIncrement:1
+                                                limit:3
+                                              current:2];
+        
+        Counter *cnt2 = [Counter new];
+    
+        cnt2.incrementValue = 1;
+        cnt2.limitValue = 3;
+        cnt2.currentValue = 1;
+        
+        expect(cnt1).notTo.equal(cnt2);
+        
+        [cnt2 count];
+        
+        expect(cnt1).to.equal(cnt2);
+    });
+    it (@"have good description", ^{
+        Counter *cnt = [Counter counterWithIncrement:1
+                                               limit:3
+                                             current:2];
+        
+        expect([cnt description]).to.equal(@"current: 2, increment: 1, limit: 3");
+    });
+        
+    it (@"can be serialied and deserialized", ^{
+        Counter *cnt = [Counter new];
+        cnt.incrementValue = 1;
+        cnt.limitValue = 3;
+        cnt.currentValue = 2;
+        
+        NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:cnt];
+        
+        Counter *unarchived = (Counter *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+        
+        BOOL equal = [cnt isEqual:unarchived];
+        
+        expect(equal).to.equal(YES);
     });
 });
 
