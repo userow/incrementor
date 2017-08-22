@@ -14,6 +14,8 @@
 
 @implementation CounterViewController
 
+#pragma mark - lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -25,5 +27,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - actions
+
+- (IBAction)incrementTapped:(id)sender;
+{
+    ;
+}
+
+- (IBAction)settingsTapped:(id)sender;
+{
+    ;
+}
 
 @end

@@ -51,6 +51,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="increment"/>
+                                <connections>
+                                    <action selector="incrementTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Bf-y1-nFG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +66,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="incrementor" id="hrI-J1-E0D">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="DYG-tu-5t5"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="DYG-tu-5t5">
+                            <connections>
+                                <action selector="settingsTapped:" destination="BYZ-38-t0r" id="eaC-Yg-qFb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentVlaueLabel" destination="bOL-1e-f52" id="AKg-iS-554"/>

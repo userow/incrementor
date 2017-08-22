@@ -81,11 +81,11 @@
 		CD3BC38E1F480904008F29D8 = {
 			isa = PBXGroup;
 			children = (
+				88B51E67012D6C7BC0C06471 /* Frameworks */,
+				CDE257BBA25EF369DC214C28 /* Pods */,
+				CD3BC3981F480905008F29D8 /* Products */,
 				CD3BC3991F480905008F29D8 /* incrementor */,
 				CD3BC3B31F480905008F29D8 /* incrementorTests */,
-				CD3BC3981F480905008F29D8 /* Products */,
-				CDE257BBA25EF369DC214C28 /* Pods */,
-				88B51E67012D6C7BC0C06471 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,15 +102,15 @@
 			isa = PBXGroup;
 			children = (
 				CD3BC3CA1F4868E0008F29D8 /* Model */,
+				CD3BC39A1F480905008F29D8 /* Supporting Files */,
 				CD3BC39D1F480905008F29D8 /* AppDelegate.h */,
 				CD3BC39E1F480905008F29D8 /* AppDelegate.m */,
+				CD3BC3A61F480905008F29D8 /* Assets.xcassets */,
 				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
 				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
-				CD3BC3A31F480905008F29D8 /* Main.storyboard */,
-				CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */,
-				CD3BC3A61F480905008F29D8 /* Assets.xcassets */,
 				CD3BC3AB1F480905008F29D8 /* Info.plist */,
-				CD3BC39A1F480905008F29D8 /* Supporting Files */,
+				CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */,
+				CD3BC3A31F480905008F29D8 /* Main.storyboard */,
 			);
 			path = incrementor;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			children = (
 				CD3BC39B1F480905008F29D8 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CD3BC3B31F480905008F29D8 /* incrementorTests */ = {
@@ -339,6 +339,7 @@
 				CD3BC3A41F480905008F29D8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */ = {
@@ -347,6 +348,7 @@
 				CD7B7BD81F4C31F100A68ECE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
