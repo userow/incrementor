@@ -115,7 +115,7 @@ describe(@"Counter", ^{
         expect([cnt description]).to.equal(@"current: 2, increment: 1, limit: 3");
     });
         
-    it (@"can be serialied and deserialized", ^{
+    it (@"can be serialized and deserialized", ^{
         Counter *cnt = [Counter new];
         cnt.incrementValue = 1;
         cnt.limitValue = 3;
@@ -124,8 +124,6 @@ describe(@"Counter", ^{
         NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:cnt];
         
         Counter *unarchived = (Counter *)[NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
-        
-//        BOOL equal = [cnt isEqual:unarchived];
         
         expect(cnt).to.equal(unarchived);
     });

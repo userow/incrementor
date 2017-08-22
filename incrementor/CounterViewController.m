@@ -6,13 +6,13 @@
 //  Copyright © 2017 Paul Wasilenko. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CounterViewController.h"
 
-@interface ViewController ()
+@interface CounterViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CounterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

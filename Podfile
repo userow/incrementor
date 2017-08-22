@@ -10,4 +10,5 @@ inhibit_all_warnings!
 target 'incrementorTests' do
 	pod 'Specta'
 	pod 'Expecta'
+    pod 'OCMock'
 end
