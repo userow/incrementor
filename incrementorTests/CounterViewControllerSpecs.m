@@ -31,14 +31,9 @@ describe(@"CounterViewController", ^{
         expect(view).notTo.beNil();
     });
     
-    it(@"can be loaded, instance of CounterVC", ^{
+    it(@"can be loaded, instance of CounterViewController", ^{
         expect(_vc).notTo.beNil();
         expect(_vc).to.beInstanceOf([CounterViewController class]);
-    });
-    
-    it(@"should have outlets - current label", ^{
-        expect([_vc currentVlaueLabel]).notTo.beNil();
-        expect([_vc currentVlaueLabel]).to.beInstanceOf([UILabel class]);
     });
     
     it(@"should have outlets - settings bar button", ^{
@@ -46,17 +41,17 @@ describe(@"CounterViewController", ^{
         expect(_vc.settingsBarButton).to.beInstanceOf([UIBarButtonItem class]);
     });
     
-    it(@"should have outlets - increment button", ^{
-        expect(_vc.incrementButton).notTo.beNil();
-        expect(_vc.incrementButton).to.beInstanceOf([UIButton class]);
+    it(@"should have outlets - count button", ^{
+        expect(_vc.countButton).notTo.beNil();
+        expect(_vc.countButton).to.beInstanceOf([UIButton class]);
     });
     
     
     it(@"should wire up increment button to action", ^{
-        UIButton *button = _vc.incrementButton;
+        UIButton *button = _vc.countButton;
         NSArray *actions = [button actionsForTarget:_vc forControlEvent:UIControlEventTouchUpInside];
         
-        expect(actions[0]).to.equal(@"incrementTapped:");
+        expect(actions[0]).to.equal(@"countButtonTapped:");
     });
     
     it(@"should wire up Settings button to action", ^{

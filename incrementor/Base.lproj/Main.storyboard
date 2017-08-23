@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,43 +37,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-1e-f52">
-                                <rect key="frame" x="178.5" y="317" width="18" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-P8-owF">
-                                <rect key="frame" x="16" y="372.5" width="343" height="44"/>
+                                <rect key="frame" x="16" y="245.5" width="343" height="176"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="1NR-In-fvh"/>
+                                    <constraint firstAttribute="height" constant="176" id="1NR-In-fvh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="increment"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="incrementTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Bf-y1-nFG"/>
+                                    <action selector="countButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sal-ZJ-X5P"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LvH-P8-owF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5yd-f0-Otc"/>
-                            <constraint firstItem="bOL-1e-f52" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IQp-Vs-hd7"/>
-                            <constraint firstItem="LvH-P8-owF" firstAttribute="top" secondItem="bOL-1e-f52" secondAttribute="bottom" constant="22" id="qJv-UR-osH"/>
+                            <constraint firstItem="LvH-P8-owF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="REa-RW-tVH"/>
+                            <constraint firstItem="LvH-P8-owF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijT-rh-Wns"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LvH-P8-owF" secondAttribute="trailing" id="vaV-FZ-yiR"/>
-                            <constraint firstItem="bOL-1e-f52" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vs4-9e-QEa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="incrementor" id="hrI-J1-E0D">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="DYG-tu-5t5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="DYG-tu-5t5">
                             <connections>
                                 <action selector="settingsTapped:" destination="BYZ-38-t0r" id="eaC-Yg-qFb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentVlaueLabel" destination="bOL-1e-f52" id="AKg-iS-554"/>
-                        <outlet property="incrementButton" destination="LvH-P8-owF" id="ef5-iW-qk7"/>
+                        <outlet property="countButton" destination="LvH-P8-owF" id="GXQ-0v-0vm"/>
                         <outlet property="settingsBarButton" destination="DYG-tu-5t5" id="2tb-4r-QIn"/>
                     </connections>
                 </viewController>

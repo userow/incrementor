@@ -17,6 +17,7 @@
 		CD5DB5581F4B402B00486035 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
 		CD5DB55A1F4B6EFF00486035 /* CounterViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */; };
 		CD7B7BD91F4C31F100A68ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */; };
+		CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,10 @@
 		CD3BC3CC1F4868E0008F29D8 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewControllerSpecs.m; sourceTree = "<group>"; };
 		CD7B7BD81F4C31F100A68ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewProtocol.h; sourceTree = "<group>"; };
+		CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewPresenterProtocol.h; sourceTree = "<group>"; };
+		CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterPresenter.h; sourceTree = "<group>"; };
+		CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterPresenter.m; sourceTree = "<group>"; };
 		D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-incrementorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,13 +106,12 @@
 		CD3BC3991F480905008F29D8 /* incrementor */ = {
 			isa = PBXGroup;
 			children = (
+				CDC864EA1F4DD80D002E68B4 /* CounterVC */,
 				CD3BC3CA1F4868E0008F29D8 /* Model */,
 				CD3BC39A1F480905008F29D8 /* Supporting Files */,
 				CD3BC39D1F480905008F29D8 /* AppDelegate.h */,
 				CD3BC39E1F480905008F29D8 /* AppDelegate.m */,
 				CD3BC3A61F480905008F29D8 /* Assets.xcassets */,
-				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
-				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
 				CD3BC3AB1F480905008F29D8 /* Info.plist */,
 				CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */,
 				CD3BC3A31F480905008F29D8 /* Main.storyboard */,
@@ -140,6 +144,19 @@
 				CD3BC3CC1F4868E0008F29D8 /* Counter.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CDC864EA1F4DD80D002E68B4 /* CounterVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
+				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
+				CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */,
+				CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */,
+				CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */,
+				CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */,
+			);
+			name = CounterVC;
 			sourceTree = "<group>";
 		};
 		CDE257BBA25EF369DC214C28 /* Pods */ = {
@@ -309,6 +326,7 @@
 				CD5DB5581F4B402B00486035 /* Counter.m in Sources */,
 				CD3BC3A21F480905008F29D8 /* CounterViewController.m in Sources */,
 				CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */,
+				CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */,
 				CD3BC39C1F480905008F29D8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

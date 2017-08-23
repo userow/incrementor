@@ -30,14 +30,23 @@
 
 #pragma mark - actions
 
-- (IBAction)incrementTapped:(id)sender;
+- (IBAction)countButtonTapped:(id)sender;
 {
     ;
 }
 
-- (IBAction)settingsTapped:(id)sender;
+- (IBAction)settingsButtonTapped:(id)sender;
 {
     ;
+}
+
+#pragma mark - CounterViewProtocol
+
+- (void)setCount:(NSString *)countString;
+{
+    [self.countButton setTitle:countString forState:UIControlStateNormal];
+    [self.countButton setTitle:countString forState:UIControlStateSelected];
+    [self.countButton setTitle:countString forState:UIControlStateHighlighted];
 }
 
 @end

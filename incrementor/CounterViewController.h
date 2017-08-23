@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CounterViewController : UIViewController
+#import "CounterViewProtocol.h"
+#import "CounterViewPresenterProtocol.h"
 
-@property (weak, nonatomic) IBOutlet UILabel *currentVlaueLabel;
+@interface CounterViewController : UIViewController <CounterViewProtocol>
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsBarButton;
-@property (weak, nonatomic) IBOutlet UIButton *incrementButton;
+@property (weak, nonatomic) IBOutlet UIButton *countButton;
+
+@property (strong, nonatomic) id<CounterViewPresenterProtocol> presenter;
 
 @end
 
