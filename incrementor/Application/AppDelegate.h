@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class Router;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) Router *router;
 
 @end
 

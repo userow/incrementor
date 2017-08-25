@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Router.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self initializeRouter];
+    
     return YES;
 }
 
@@ -47,5 +52,23 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - initialization
+
+/**
+ Sets up RouterController
+ */
+- (void)initializeRouter
+{
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    if (!self.router) {
+        self.router = [Router new];
+    }
+    
+    [self.router showInitialViewController];
+    
+    [self.window makeKeyAndVisible];
+}
 
 @end

@@ -23,7 +23,7 @@
 
 
 /**
- граничное значение - по достижении которого счётчик сбрасывается до 0
+ граничное значение - по достижении которого счётчик сбрасывается до 0. при граничном значении 0 - граничное значение не проверяется, счётчик не сбрасывается.
  */
 @property (assign) NSInteger limitValue;
 
@@ -58,8 +58,8 @@
  constructor
 
  @param increment инкремент
- @param limit граничное значение
- @param current текущее значение
+ @param limit граничное значение. 0 - граничное значение не проверяется, счётчик не сбрасывается.
+ @param current текущее значение счётчика
  @return Counter
  */
 + (instancetype)counterWithIncrement:(NSInteger)increment
@@ -69,20 +69,18 @@
 #pragma mark - operations
 
 /**
- сброс значения счётчика
- */
-- (void)reset;
-
-
-/**
  инкрементирование счётчика
-
+ 
  @return инерементированное значение счётчика
  */
 - (NSInteger)count;
 
+/**
+ сброс значения счётчика
+ */
+- (void)reset;
 
-//TODO: Hash
+//TODO: Hash ?
 
 #pragma mark - saving to / loading frоm NSUserDefaults
 /**

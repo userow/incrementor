@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C100A8BCAC36B5B1C6937FFF /* libPods-incrementorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */; };
+		CD0BFBA31F505BCA00AB22DF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0BFBA21F505BCA00AB22DF /* BaseViewController.m */; };
 		CD3BC39C1F480905008F29D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC39B1F480905008F29D8 /* main.m */; };
 		CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC39E1F480905008F29D8 /* AppDelegate.m */; };
 		CD3BC3A21F480905008F29D8 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3A11F480905008F29D8 /* CounterViewController.m */; };
@@ -18,6 +19,8 @@
 		CD5DB55A1F4B6EFF00486035 /* CounterViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */; };
 		CD7B7BD91F4C31F100A68ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */; };
 		CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */; };
+		CDC865301F4EF589002E68B4 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8652F1F4EF589002E68B4 /* Router.m */; };
+		CDC865331F4EF9DB002E68B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC865321F4EF9DB002E68B4 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		5BA0ED9C8E0C5A05ED45BBF3 /* Pods-incrementorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-incrementorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA06E7E96D90E5BA6E468816 /* Pods-incrementorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-incrementorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-incrementorTests/Pods-incrementorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0BFBA11F505BCA00AB22DF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Library/BaseViewController.h; sourceTree = "<group>"; };
+		CD0BFBA21F505BCA00AB22DF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Library/BaseViewController.m; sourceTree = "<group>"; };
+		CD3A440A1F5030630072158D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CD3BC3971F480905008F29D8 /* incrementor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = incrementor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BC39B1F480905008F29D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD3BC39D1F480905008F29D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +59,10 @@
 		CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewPresenterProtocol.h; sourceTree = "<group>"; };
 		CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterPresenter.h; sourceTree = "<group>"; };
 		CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterPresenter.m; sourceTree = "<group>"; };
+		CDC8652E1F4EF589002E68B4 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		CDC8652F1F4EF589002E68B4 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
+		CDC865311F4EF9DB002E68B4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		CDC865321F4EF9DB002E68B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D076538781A1C24F7DB8A414 /* libPods-incrementorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-incrementorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +93,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD0BFB9F1F505A2500AB22DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDC864EA1F4DD80D002E68B4 /* CounterVC */,
+				CDC864F01F4EBD4E002E68B4 /* SettingsVC */,
+				CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */,
+				CD3BC3A31F480905008F29D8 /* Main.storyboard */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CD0BFBA01F505AFE00AB22DF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CD0BFBA11F505BCA00AB22DF /* BaseViewController.h */,
+				CD0BFBA21F505BCA00AB22DF /* BaseViewController.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		CD3A44091F50064C0072158D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BC39D1F480905008F29D8 /* AppDelegate.h */,
+				CD3BC39E1F480905008F29D8 /* AppDelegate.m */,
+				CD3BC3AB1F480905008F29D8 /* Info.plist */,
+				CD3A440A1F5030630072158D /* PrefixHeader.pch */,
+				CD3BC39B1F480905008F29D8 /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		CD3BC38E1F480904008F29D8 = {
 			isa = PBXGroup;
 			children = (
@@ -106,25 +148,14 @@
 		CD3BC3991F480905008F29D8 /* incrementor */ = {
 			isa = PBXGroup;
 			children = (
-				CDC864EA1F4DD80D002E68B4 /* CounterVC */,
+				CD0BFBA01F505AFE00AB22DF /* Library */,
+				CD0BFB9F1F505A2500AB22DF /* Controllers */,
+				CD3A44091F50064C0072158D /* Application */,
 				CD3BC3CA1F4868E0008F29D8 /* Model */,
-				CD3BC39A1F480905008F29D8 /* Supporting Files */,
-				CD3BC39D1F480905008F29D8 /* AppDelegate.h */,
-				CD3BC39E1F480905008F29D8 /* AppDelegate.m */,
+				CDC864F11F4ED946002E68B4 /* Router */,
 				CD3BC3A61F480905008F29D8 /* Assets.xcassets */,
-				CD3BC3AB1F480905008F29D8 /* Info.plist */,
-				CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */,
-				CD3BC3A31F480905008F29D8 /* Main.storyboard */,
 			);
 			path = incrementor;
-			sourceTree = "<group>";
-		};
-		CD3BC39A1F480905008F29D8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD3BC39B1F480905008F29D8 /* main.m */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CD3BC3B31F480905008F29D8 /* incrementorTests */ = {
@@ -149,14 +180,32 @@
 		CDC864EA1F4DD80D002E68B4 /* CounterVC */ = {
 			isa = PBXGroup;
 			children = (
-				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
-				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
-				CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */,
-				CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */,
 				CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */,
 				CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */,
+				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
+				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
+				CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */,
+				CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */,
 			);
-			name = CounterVC;
+			path = CounterVC;
+			sourceTree = "<group>";
+		};
+		CDC864F01F4EBD4E002E68B4 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CDC865311F4EF9DB002E68B4 /* SettingsViewController.h */,
+				CDC865321F4EF9DB002E68B4 /* SettingsViewController.m */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		CDC864F11F4ED946002E68B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CDC8652E1F4EF589002E68B4 /* Router.h */,
+				CDC8652F1F4EF589002E68B4 /* Router.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CDE257BBA25EF369DC214C28 /* Pods */ = {
@@ -324,10 +373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5DB5581F4B402B00486035 /* Counter.m in Sources */,
+				CD0BFBA31F505BCA00AB22DF /* BaseViewController.m in Sources */,
 				CD3BC3A21F480905008F29D8 /* CounterViewController.m in Sources */,
 				CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */,
 				CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */,
+				CDC865301F4EF589002E68B4 /* Router.m in Sources */,
 				CD3BC39C1F480905008F29D8 /* main.m in Sources */,
+				CDC865331F4EF9DB002E68B4 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,10 +521,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SN623CU8P7;
-				INFOPLIST_FILE = incrementor/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Application/PrefixHeader.pch";
+				INFOPLIST_FILE = incrementor/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pro.barsislis.incrementor.incrementor;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.barsislis.incrementor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -482,10 +537,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SN623CU8P7;
-				INFOPLIST_FILE = incrementor/Info.plist;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Application/PrefixHeader.pch";
+				INFOPLIST_FILE = incrementor/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pro.barsislis.incrementor.incrementor;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.barsislis.incrementor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

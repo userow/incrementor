@@ -43,18 +43,23 @@
 
 - (instancetype)initWithView:(id)view model:(Counter *)counter {
     if (self = [super init]) {
-        
+        _model = counter;
+        _view = view;
     }
     
     return self;
 }
 
 - (void)showCount {
-    ;
+    NSString *countString = [NSString stringWithFormat:@"%ld",
+                             self.model.currentValue];
+    
+    [_view setCount:countString];
 }
 
 - (void)countCounter {
-    ;
+    [self.model count];
+    [self showCount];
 }
 
 @end
