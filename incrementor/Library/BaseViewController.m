@@ -16,7 +16,7 @@
 
 + (instancetype)storyboardInstance;
 {
-    UIStoryboard *story = [UIStoryboard storyboardWithName:NSStringFromClass([self class]) bundle:nil];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     id controller;
     

@@ -22,11 +22,11 @@ describe(@"Counter", ^{
     it(@"can be initialized with default values", ^{
         Counter *counter = [[Counter alloc] init];
         
-        expect(counter.currentValue).to.equal(0);
+        expect([counter getCount]).to.equal(0);
         
-        expect(counter.incrementValue).to.equal(1);
+        expect([counter getIncrement]).to.equal(1);
         
-        expect(counter.limitValue).to.equal(0);
+        expect([counter getLimit]).to.equal(NSIntegerMax);
         
     });
     
@@ -36,7 +36,9 @@ describe(@"Counter", ^{
                                                limit:3
                                              current:0];
         
-        expect(cnt.currentValue).to.equal(0);
+        expect([cnt getCount]).to.equal(0);
+        expect([cnt getIncrement]).to.equal(1);
+        expect([cnt getLimit]).to.equal(3);
     });
     
     it(@"can be incremented", ^{
@@ -44,9 +46,9 @@ describe(@"Counter", ^{
                                                limit:3
                                              current:0];
         
-        [cnt count];
+        [cnt doStep];
         
-        expect(cnt.currentValue).to.equal(1);
+        expect([cnt getCount]).to.equal(1);
     });
     
     it(@"can be reseted", ^{
@@ -54,13 +56,13 @@ describe(@"Counter", ^{
                                                limit:3
                                              current:0];
         
-        [cnt count];
+        [cnt doStep];
         
-        expect(cnt.currentValue).to.equal(1);
+        expect([cnt getCount]).to.equal(1);
         
-        [cnt reset];
+        [cnt doReset];
         
-        expect(cnt.currentValue).to.equal(0);
+        expect([cnt getCount]).to.equal(0);
     });
     
     it (@"Counter curreentValue should be 0 on reaching limit", ^{
@@ -68,11 +70,11 @@ describe(@"Counter", ^{
                                                limit:3
                                              current:2];
         
-        expect(cnt.currentValue).to.equal(2);
+        expect([cnt getCount]).to.equal(2);
         
-        [cnt count];
+        [cnt doStep];
         
-        expect(cnt.currentValue).to.equal(0);
+        expect([cnt getCount]).to.equal(0);
     });
     
     it (@"can be equal", ^{
@@ -85,7 +87,7 @@ describe(@"Counter", ^{
                                               current:1];
         expect(cnt1).notTo.equal(cnt2);
         
-        [cnt2 count];
+        [cnt2 doStep];
         
         expect(cnt1).to.equal(cnt2);
     });
@@ -97,13 +99,13 @@ describe(@"Counter", ^{
         
         Counter *cnt2 = [Counter new];
     
-        cnt2.incrementValue = 1;
-        cnt2.limitValue = 3;
-        cnt2.currentValue = 1;
+        [cnt2 setIncrement:1];
+        [cnt2 setLimit:3];
+        [cnt2 setCount:1];
         
         expect(cnt1).notTo.equal(cnt2);
         
-        [cnt2 count];
+        [cnt2 doStep];
         
         expect(cnt1).to.equal(cnt2);
     });
@@ -117,9 +119,9 @@ describe(@"Counter", ^{
         
     it (@"can be serialized and deserialized", ^{
         Counter *cnt = [Counter new];
-        cnt.incrementValue = 1;
-        cnt.limitValue = 3;
-        cnt.currentValue = 2;
+        [cnt setIncrement:1];
+        [cnt setLimit:3];
+        [cnt setCount:1];
         
         NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:cnt];
         
@@ -130,10 +132,9 @@ describe(@"Counter", ^{
     
     
     it (@"can save to and load from user defaults", ^{
-        Counter *cnt = [Counter new];
-        cnt.incrementValue = 1;
-        cnt.limitValue = 3;
-        cnt.currentValue = 2;
+        Counter *cnt = [Counter counterWithIncrement:1
+                                               limit:3
+                                             current:2];
         
         [cnt saveCounter];
         

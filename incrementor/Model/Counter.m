@@ -8,11 +8,13 @@
 
 #import "Counter.h"
 
-static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
+#import "PersistService.h"
 
 @interface Counter ()
 
-@property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
+//@property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
+
+@property (nonatomic, strong) PersistService *saveService;
 
 /**
  текущее значение счётчика
@@ -38,7 +40,7 @@ static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
 
 - (instancetype)init {
     if (self = [super init]) {
-        _userDefaults = [NSUserDefaults standardUserDefaults];
+//        _userDefaults = [NSUserDefaults standardUserDefaults];
         
         _incrementValue = 1;
         _currentValue = 0;
@@ -149,7 +151,7 @@ static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
 #pragma mark - operations
 
 - (NSInteger)doStep {
-    if (NSIntegerMax - _currentValue <= _incrementValue &&
+    if (NSIntegerMax - _currentValue > _incrementValue &&
         _currentValue + _incrementValue < _limitValue)
     {
         _currentValue += _incrementValue;
@@ -182,10 +184,10 @@ static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
 
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder;
 {
-    
+    // ??? is it right ???
     if (self = [super init])
     {
-        _userDefaults = [NSUserDefaults standardUserDefaults];
+//        _userDefaults = [NSUserDefaults standardUserDefaults];
         
         _currentValue   = [aDecoder decodeIntegerForKey:@"_currentValue"];
         _incrementValue = [aDecoder decodeIntegerForKey:@"_incrementValue"];
@@ -205,9 +207,13 @@ static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
 {
     NSLog(@"Saving Counter...");
     
-    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:self];
-    [_userDefaults setObject:encodedObject forKey:CURRENT_COUNTER];
-    [_userDefaults synchronize];
+    if (!self.saveService) {
+        _saveService = [PersistService newWithUserDefaults:[NSUserDefaults standardUserDefaults]
+                                                       key:@"CURRENT_SAVED_COUNTER"
+                                         persistingnObject:self];
+    }
+    
+    [_saveService saveObject];
 }
 
 /**
@@ -216,11 +222,16 @@ static NSString *CURRENT_COUNTER = @"CURRENT_COUNTER";
 + (instancetype)loadCounter;
 {
     NSLog(@"Loading Counter...");
-
-    //???: как перенести во внешние зависимости? или не надо...
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *encodedObject = [defaults objectForKey:CURRENT_COUNTER];
-    Counter *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+ 
+    Counter *object = [Counter new];
+              
+    if (!object.saveService) {
+        object.saveService = [PersistService newWithUserDefaults:[NSUserDefaults standardUserDefaults]
+                                                             key:@"CURRENT_SAVED_COUNTER"
+                                               persistingnObject:object];
+    }
+    
+    object = (Counter *)[object.saveService loadObject];
 
     return object;
 }

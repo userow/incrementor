@@ -10,7 +10,12 @@
 
 @protocol PersistProtocol <NSObject>
 
-+ (instance)newWithUserDefaults:(NSUserDefaults *)userDefaults
-              persistingnObject:(NSObject<NSCoding>*)object;
++ (instancetype)newWithUserDefaults:(NSUserDefaults *)userDefaults
+                                key:(NSString *)key
+                  persistingnObject:(NSObject<NSCoding>*)object;
+
+- (void)saveObject;
+
+- (NSObject<NSCoding> *)loadObject;
 
 @end

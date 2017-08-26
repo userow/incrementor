@@ -68,9 +68,12 @@
 
 - (void)showInitialViewController;
 {
-    if ([_navigationController.topViewController isKindOfClass:[SettingsViewController class]]) {
+    if ([_navigationController.topViewController isKindOfClass:[SettingsViewController class]])
+    {
         [_navigationController popViewControllerAnimated:YES];
-    } else {
+    }
+    else
+    {
         //assembling MVP
         CounterViewController *counterVC = [CounterViewController storyboardInstance];
         Counter *couter = [Counter loadCounter];
@@ -83,7 +86,8 @@
 
 - (void)showSettings;
 {
-    if (![_navigationController.topViewController isKindOfClass:[SettingsViewController class]]) {
+    if (![_navigationController.topViewController isKindOfClass:[SettingsViewController class]])
+    {
         //assembling MVP
         SettingsViewController *settingsVC = [SettingsViewController storyboardInstance];
         Counter *couter = [Counter loadCounter];
