@@ -18,9 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [self initializeRouter];
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -59,16 +64,11 @@
  */
 - (void)initializeRouter
 {
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
     if (!self.router) {
-        self.router = [Router new];
+        self.router = [Router newWithWindow:_window];
     }
     
     [self.router showInitialViewController];
-    
-    [self.window makeKeyAndVisible];
 }
 
 @end

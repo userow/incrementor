@@ -17,7 +17,9 @@
 		CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */; };
 		CD5DB5581F4B402B00486035 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
 		CD5DB55A1F4B6EFF00486035 /* CounterViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */; };
+		CD6D9DC81F57DD12005280A4 /* NoPasteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9DC71F57DD12005280A4 /* NoPasteTextField.m */; };
 		CD7B7BD91F4C31F100A68ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7B7BD71F4C31F100A68ECE /* LaunchScreen.storyboard */; };
+		CDBAFC3F1F5532850037011F /* SettingsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBAFC3C1F5532850037011F /* SettingsPresenter.m */; };
 		CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */; };
 		CDC865301F4EF589002E68B4 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC8652F1F4EF589002E68B4 /* Router.m */; };
 		CDC865331F4EF9DB002E68B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC865321F4EF9DB002E68B4 /* SettingsViewController.m */; };
@@ -54,9 +56,16 @@
 		CD3BC3CB1F4868E0008F29D8 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		CD3BC3CC1F4868E0008F29D8 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewControllerSpecs.m; sourceTree = "<group>"; };
+		CD6D9DC61F57DD12005280A4 /* NoPasteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoPasteTextField.h; sourceTree = "<group>"; };
+		CD6D9DC71F57DD12005280A4 /* NoPasteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoPasteTextField.m; sourceTree = "<group>"; };
+		CD6D9DC91F580615005280A4 /* PersistProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersistProtocol.h; sourceTree = "<group>"; };
 		CD7B7BD81F4C31F100A68ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDBAFC3B1F5532850037011F /* SettingsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPresenter.h; sourceTree = "<group>"; };
+		CDBAFC3C1F5532850037011F /* SettingsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPresenter.m; sourceTree = "<group>"; };
+		CDBAFC3D1F5532850037011F /* SettingsPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPresenterProtocol.h; sourceTree = "<group>"; };
+		CDBAFC3E1F5532850037011F /* SettingsViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewProtocol.h; sourceTree = "<group>"; };
 		CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewProtocol.h; sourceTree = "<group>"; };
-		CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterViewPresenterProtocol.h; sourceTree = "<group>"; };
+		CDC864EC1F4DEB4E002E68B4 /* CounterPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterPresenterProtocol.h; sourceTree = "<group>"; };
 		CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterPresenter.h; sourceTree = "<group>"; };
 		CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterPresenter.m; sourceTree = "<group>"; };
 		CDC8652E1F4EF589002E68B4 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
@@ -107,6 +116,8 @@
 		CD0BFBA01F505AFE00AB22DF /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CD6D9DC61F57DD12005280A4 /* NoPasteTextField.h */,
+				CD6D9DC71F57DD12005280A4 /* NoPasteTextField.m */,
 				CD0BFBA11F505BCA00AB22DF /* BaseViewController.h */,
 				CD0BFBA21F505BCA00AB22DF /* BaseViewController.m */,
 			);
@@ -173,6 +184,7 @@
 			children = (
 				CD3BC3CB1F4868E0008F29D8 /* Counter.h */,
 				CD3BC3CC1F4868E0008F29D8 /* Counter.m */,
+				CD6D9DC91F580615005280A4 /* PersistProtocol.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,9 +194,9 @@
 			children = (
 				CDC864ED1F4DF167002E68B4 /* CounterPresenter.h */,
 				CDC864EE1F4DF167002E68B4 /* CounterPresenter.m */,
+				CDC864EC1F4DEB4E002E68B4 /* CounterPresenterProtocol.h */,
 				CD3BC3A01F480905008F29D8 /* CounterViewController.h */,
 				CD3BC3A11F480905008F29D8 /* CounterViewController.m */,
-				CDC864EC1F4DEB4E002E68B4 /* CounterViewPresenterProtocol.h */,
 				CDC864EB1F4DE87E002E68B4 /* CounterViewProtocol.h */,
 			);
 			path = CounterVC;
@@ -193,8 +205,12 @@
 		CDC864F01F4EBD4E002E68B4 /* SettingsVC */ = {
 			isa = PBXGroup;
 			children = (
+				CDBAFC3B1F5532850037011F /* SettingsPresenter.h */,
+				CDBAFC3C1F5532850037011F /* SettingsPresenter.m */,
+				CDBAFC3D1F5532850037011F /* SettingsPresenterProtocol.h */,
 				CDC865311F4EF9DB002E68B4 /* SettingsViewController.h */,
 				CDC865321F4EF9DB002E68B4 /* SettingsViewController.m */,
+				CDBAFC3E1F5532850037011F /* SettingsViewProtocol.h */,
 			);
 			path = SettingsVC;
 			sourceTree = "<group>";
@@ -376,7 +392,9 @@
 				CD0BFBA31F505BCA00AB22DF /* BaseViewController.m in Sources */,
 				CD3BC3A21F480905008F29D8 /* CounterViewController.m in Sources */,
 				CD3BC39F1F480905008F29D8 /* AppDelegate.m in Sources */,
+				CD6D9DC81F57DD12005280A4 /* NoPasteTextField.m in Sources */,
 				CDC864EF1F4DF167002E68B4 /* CounterPresenter.m in Sources */,
+				CDBAFC3F1F5532850037011F /* SettingsPresenter.m in Sources */,
 				CDC865301F4EF589002E68B4 /* Router.m in Sources */,
 				CD3BC39C1F480905008F29D8 /* main.m in Sources */,
 				CDC865331F4EF9DB002E68B4 /* SettingsViewController.m in Sources */,

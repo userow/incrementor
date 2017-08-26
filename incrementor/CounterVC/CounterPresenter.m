@@ -52,13 +52,13 @@
 
 - (void)showCount {
     NSString *countString = [NSString stringWithFormat:@"%ld",
-                             self.model.currentValue];
+                             [self.model getCount]];
     
     [_view setCount:countString];
 }
 
-- (void)countCounter {
-    [self.model count];
+- (void)onCountButtonClicked {
+    [self.model doStep];
     [self showCount];
 }
 

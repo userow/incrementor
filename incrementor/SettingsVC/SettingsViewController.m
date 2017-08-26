@@ -14,7 +14,7 @@
 
 @implementation SettingsViewController
 
-#pragma mark - actions
+#pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,12 +30,14 @@
 
 - (IBAction)resetButtonTapped:(id)sender;
 {
-    
+    [self.presenter doResetCounter];
 }
 
 #pragma mark - textFields delegate methods
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+- (BOOL)textField:(UITextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+replacementString:(NSString *)string;
 {
     BOOL shouldChange = NO;
     
@@ -49,5 +51,32 @@
     
     return shouldChange;
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    [textField resignFirstResponder];
+    
+    if (textField == _limitTextField) {
+        [self.presenter setLimitString:_limitTextField.text];
+    }
+    else if (textField == _incrementTextField) {
+        [self.presenter setIncrementString:_incrementTextField.text];
+    }
+    
+    return NO;
+}
+
+#pragma mark - SettingsViewProtocol
+
+- (void)setIncrement:(NSString *)incrementString;
+{
+    _incrementTextField.text = incrementString;
+}
+
+- (void)setLimit:(NSString *)limitString;
+{
+    _limitTextField.text = limitString;
+}
+
 
 @end

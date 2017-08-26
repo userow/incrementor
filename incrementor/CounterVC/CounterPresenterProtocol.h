@@ -1,5 +1,5 @@
 //
-//  CounterViewPresenterProtocol.h
+//  CounterPresenterProtocol.h
 //  incrementor
 //
 //  Created by Pavel Wasilenko on 2017-08-22.
@@ -17,7 +17,7 @@
 #import "CounterViewProtocol.h"
 #import "Counter.h"
 
-@protocol CounterViewPresenterProtocol <NSObject>
+@protocol CounterPresenterProtocol <NSObject>
 
 
 /**
@@ -37,8 +37,8 @@
 
 
 /**
- передать модели, что она должна инкрементировться
+ во View тапнули на число - передать модели, что она должна инкрементировться
  */
-- (void)countCounter;
+- (void)onCountButtonClicked;
 
 @end

@@ -6,7 +6,12 @@
 //  Copyright © 2017 Paul Wasilenko. All rights reserved.
 //
 
+
+/**
+ Протокол View - методы, предоставляющиеся Presenter-у
+ */
 @protocol CounterViewProtocol <NSObject>
+
 
 - (void)setCount:(NSString *)countString;
 

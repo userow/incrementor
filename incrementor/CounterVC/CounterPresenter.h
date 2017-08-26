@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CounterViewPresenterProtocol.h"
+#import "CounterPresenterProtocol.h"
 
-@interface CounterPresenter : NSObject <CounterViewPresenterProtocol>
+@interface CounterPresenter : NSObject <CounterPresenterProtocol>
 
 @end

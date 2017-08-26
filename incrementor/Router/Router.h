@@ -13,7 +13,7 @@
 
 @interface Router : NSObject
 
-@property (strong, nonatomic) UINavigationController *navigationController;
++ (instancetype)newWithWindow:(UIWindow *)window;
 
 - (void)showInitialViewController;
 

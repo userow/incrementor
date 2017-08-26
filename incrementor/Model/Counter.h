@@ -12,23 +12,6 @@
 
 #pragma mark - initializers and constructors
 /**
- текущее значение счётчика
- */
-@property (assign) NSInteger currentValue;
-
-/**
- инкремент счётчика
- */
-@property (assign) NSInteger incrementValue;
-
-
-/**
- граничное значение - по достижении которого счётчик сбрасывается до 0. при граничном значении 0 - граничное значение не проверяется, счётчик не сбрасывается.
- */
-@property (assign) NSInteger limitValue;
-
-
-/**
  initializer
  
  @return Counter
@@ -66,6 +49,22 @@
                                limit:(NSInteger)limit
                              current:(NSInteger)current;
 
+#pragma mark - getters
+
+- (NSInteger)getCount;
+
+- (NSInteger)getIncrement;
+
+- (NSInteger)getLimit;
+
+#pragma mark - setters
+
+- (void)setCount:(NSInteger)count;
+
+- (void)setIncrement:(NSInteger)increment;
+
+- (void)setLimit:(NSInteger)limit;
+
 #pragma mark - operations
 
 /**
@@ -73,12 +72,12 @@
  
  @return инерементированное значение счётчика
  */
-- (NSInteger)count;
+- (NSInteger)doStep;
 
 /**
  сброс значения счётчика
  */
-- (void)reset;
+- (void)doReset;
 
 //TODO: Hash ?
 

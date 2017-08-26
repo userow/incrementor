@@ -32,7 +32,7 @@
 
 - (IBAction)countButtonTapped:(id)sender;
 {
-    [self.presenter countCounter];
+    [self.presenter onCountButtonClicked];
 }
 
 - (IBAction)settingsButtonTapped:(id)sender;

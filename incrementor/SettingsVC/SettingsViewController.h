@@ -10,7 +10,11 @@
 
 #import "BaseViewController.h"
 
-@interface SettingsViewController : BaseViewController
+#import "SettingsPresenter.h"
+
+@interface SettingsViewController : BaseViewController <SettingsViewProtocol>
+
+@property (strong, nonatomic) SettingsPresenter *presenter;
 
 @property (weak, nonatomic) IBOutlet UITextField *incrementTextField;
 @property (weak, nonatomic) IBOutlet UITextField *limitTextField;
