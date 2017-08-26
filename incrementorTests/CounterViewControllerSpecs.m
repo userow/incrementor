@@ -13,6 +13,13 @@
 
 #import "CounterViewController.h"
 
+/*
+ @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsBarButton;
+ @property (weak, nonatomic) IBOutlet UIButton *countButton;
+ 
+ @property (strong, nonatomic) id<CounterPresenterProtocol> presenter;
+ */
+
 SpecBegin(CounterViewControllerSpec)
 
 describe(@"CounterViewController", ^{
@@ -21,19 +28,14 @@ describe(@"CounterViewController", ^{
     
     beforeEach(^{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UINavigationController *nav = [storyboard instantiateInitialViewController];
-        _vc = (CounterViewController *)[nav visibleViewController];
+        
+        _vc = [storyboard instantiateInitialViewController];
         
         expect(_vc).to.beInstanceOf([CounterViewController class]);
         
         //for viewDidLoad execution
         UIView *view = _vc.view;
         expect(view).notTo.beNil();
-    });
-    
-    it(@"can be loaded, instance of CounterViewController", ^{
-        expect(_vc).notTo.beNil();
-        expect(_vc).to.beInstanceOf([CounterViewController class]);
     });
     
     it(@"should have outlets - settings bar button", ^{
@@ -58,7 +60,7 @@ describe(@"CounterViewController", ^{
         UIBarButtonItem *button = _vc.settingsBarButton;
         NSString *action = NSStringFromSelector(button.action);
         
-        expect(action).to.equal(@"settingsTapped:");
+        expect(action).to.equal(@"settingsBarButtonTapped:");
     });
 });
 

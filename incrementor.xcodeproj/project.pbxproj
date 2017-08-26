@@ -15,6 +15,7 @@
 		CD3BC3A51F480905008F29D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A31F480905008F29D8 /* Main.storyboard */; };
 		CD3BC3A71F480905008F29D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BC3A61F480905008F29D8 /* Assets.xcassets */; };
 		CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3C51F4866D3008F29D8 /* CounterSpecs.m */; };
+		CD4FA79A1F5D5287001569DB /* CounterViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB5591F4B6EFF00486035 /* CounterViewControllerSpecs.m */; };
 		CD5DB5581F4B402B00486035 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3BC3CC1F4868E0008F29D8 /* Counter.m */; };
 		CD6D9DC81F57DD12005280A4 /* NoPasteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9DC71F57DD12005280A4 /* NoPasteTextField.m */; };
 		CD6D9DCC1F58400A005280A4 /* PersistService.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6D9DCB1F58400A005280A4 /* PersistService.m */; };
@@ -410,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4FA79A1F5D5287001569DB /* CounterViewControllerSpecs.m in Sources */,
 				CD3BC3C61F4866D3008F29D8 /* CounterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -62,4 +62,8 @@
     [self showCount];
 }
 
+- (void)onSettingsButtonClicked {
+    //TODO: Router interaction
+}
+
 @end

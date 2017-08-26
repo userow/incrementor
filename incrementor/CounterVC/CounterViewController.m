@@ -35,9 +35,9 @@
     [self.presenter onCountButtonClicked];
 }
 
-- (IBAction)settingsButtonTapped:(id)sender;
+- (IBAction)settingsBarButtonTapped:(id)sender;
 {
-    ;
+    [self.presenter onSettingsButtonClicked];
 }
 
 #pragma mark - CounterViewProtocol
@@ -47,14 +47,6 @@
     [self.countButton setTitle:countString forState:UIControlStateNormal];
     [self.countButton setTitle:countString forState:UIControlStateSelected];
     [self.countButton setTitle:countString forState:UIControlStateHighlighted];
-}
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 @end

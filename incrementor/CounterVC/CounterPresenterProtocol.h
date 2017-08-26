@@ -41,4 +41,9 @@
  */
 - (void)onCountButtonClicked;
 
+/**
+ во View тапнули на иконку настроек - передать презентеру, что нужно показать настройки
+ */
+- (void)onSettingsButtonClicked;
+
 @end
